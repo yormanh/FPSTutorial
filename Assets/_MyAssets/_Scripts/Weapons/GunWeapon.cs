@@ -13,14 +13,14 @@ public class GunWeapon : BaseWeapon
 
     public override void Attack()
     {
-        if (Time.time > mfNextShootTime && miCurrentAmminution > 0)
+        if (Time.time > mfNextShootTime && miCurrentAmmunition > 0)
         {
             GameObject lNewBullet = Instantiate(mBulletPrefab, mShootPoint.position, mShootPoint.rotation);
 
 
             lNewBullet.GetComponent<Rigidbody>().AddForce(mShootPoint.forward * mfShootForce, ForceMode.Impulse);
 
-            miCurrentAmminution--;
+            miCurrentAmmunition--;
             mfNextShootTime = Time.time + mfTimeBetweenShoots;
 
 

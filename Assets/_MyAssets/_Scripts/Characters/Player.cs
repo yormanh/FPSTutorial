@@ -25,4 +25,10 @@ public class Player : MonoBehaviour
         //Debug.Log("Attack");
         mEquippedWeapon.Attack();
     }
+
+    private void OnReload ()
+    {
+        //Debug.Log("Reload");
+        mEquippedWeapon.Reload();
+    }
 }

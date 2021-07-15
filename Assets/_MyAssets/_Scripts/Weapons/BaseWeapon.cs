@@ -8,17 +8,18 @@ public class BaseWeapon : MonoBehaviour
     [SerializeField] protected int miMaxAmmunition = 8;
     [SerializeField] protected int miMaxInventoryAmmunition = 32;
 
-    protected int miCurrentAmminution;
+    protected int miCurrentAmmunition;
     protected int miCurrentInvetoryAmmunition;
 
     [SerializeField] protected int miDamage = 10;
     [SerializeField] protected float mfTimeBetweenShoots = 0.2f;
 
+    [SerializeField] bool mbInfiniteAmmunition = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        miCurrentAmminution = miMaxAmmunition;
+        miCurrentAmmunition = miMaxAmmunition;
         miCurrentInvetoryAmmunition = miMaxAmmunition;
     }
 
@@ -34,8 +35,15 @@ public class BaseWeapon : MonoBehaviour
         
     }
 
-    private void Reload()
+    public void Reload()
     {
+
+        int liAmmunitionToReload = Mathf.Min(miMaxAmmunition - miCurrentAmmunition, miCurrentInvetoryAmmunition);
+
+        miCurrentAmmunition += liAmmunitionToReload;
+
+        if (!mbInfiniteAmmunition)
+            miCurrentInvetoryAmmunition -= liAmmunitionToReload;
 
     }
 }
