@@ -16,6 +16,8 @@ public class BaseWeapon : MonoBehaviour
 
     [SerializeField] bool mbInfiniteAmmunition = false;
 
+    [SerializeField] AudioClip mReloadAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,12 +40,18 @@ public class BaseWeapon : MonoBehaviour
     public void Reload()
     {
 
+
+
         int liAmmunitionToReload = Mathf.Min(miMaxAmmunition - miCurrentAmmunition, miCurrentInvetoryAmmunition);
 
-        miCurrentAmmunition += liAmmunitionToReload;
+        if (liAmmunitionToReload > 0)
+        {
+            AudioSource.PlayClipAtPoint(mReloadAudio, this.transform.position);
 
-        if (!mbInfiniteAmmunition)
-            miCurrentInvetoryAmmunition -= liAmmunitionToReload;
+            miCurrentAmmunition += liAmmunitionToReload;
 
+            if (!mbInfiniteAmmunition)
+                miCurrentInvetoryAmmunition -= liAmmunitionToReload;
+        }
     }
 }

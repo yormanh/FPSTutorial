@@ -9,26 +9,40 @@ public class GunWeapon : BaseWeapon
 
     [SerializeField] float mfShootForce = 50f;
 
+    [SerializeField] AudioClip mShootAudio;
+    [SerializeField] AudioClip mNoAmmo;
+
+
     float mfNextShootTime = 0;
+
+
 
     public override void Attack()
     {
-        if (Time.time > mfNextShootTime && miCurrentAmmunition > 0)
+        if (Time.time > mfNextShootTime)
         {
-            GameObject lNewBullet = Instantiate(mBulletPrefab, mShootPoint.position, mShootPoint.rotation);
+            if (miCurrentAmmunition > 0)
+            {
+                AudioSource.PlayClipAtPoint(mShootAudio, this.transform.position);
+
+                GameObject lNewBullet = Instantiate(mBulletPrefab, mShootPoint.position, mShootPoint.rotation);
 
 
-            lNewBullet.GetComponent<Rigidbody>().AddForce(mShootPoint.forward * mfShootForce, ForceMode.Impulse);
+                lNewBullet.GetComponent<Rigidbody>().AddForce(mShootPoint.forward * mfShootForce, ForceMode.Impulse);
 
-            miCurrentAmmunition--;
-            mfNextShootTime = Time.time + mfTimeBetweenShoots;
+                miCurrentAmmunition--;
+                mfNextShootTime = Time.time + mfTimeBetweenShoots;
+
+
+            }
+            else
+            {
+                Debug.Log(this.name + " no tiene munición");
+                AudioSource.PlayClipAtPoint(mNoAmmo, this.transform.position);
+            }
 
 
         }
-        else
-        {
-            Debug.Log(this.name + " no tiene munición");
-        }
-
     }
+
 }

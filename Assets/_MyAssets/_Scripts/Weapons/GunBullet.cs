@@ -28,7 +28,8 @@ public class GunBullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            other.GetComponent<Enemy>().TakeDamage();
         }
 
         Destroy(this.gameObject);

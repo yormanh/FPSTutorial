@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6893828638956381857}
   - component: {fileID: 6246742645270926188}
   - component: {fileID: 6333945717123648417}
+  - component: {fileID: 6543148966707636523}
   m_Layer: 0
   m_Name: EnemyCapsule
   m_TagString: Enemy
@@ -101,3 +102,16 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6543148966707636523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092580247999470297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d33e0d732ea7c0e4383dddb877f859f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mExplosionPrefab: {fileID: 100014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
