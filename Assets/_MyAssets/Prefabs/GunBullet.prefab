@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6618182839261252092}
   - component: {fileID: 2539084747060404469}
+  - component: {fileID: 3883731974328723886}
   m_Layer: 0
-  m_Name: BulletGun
+  m_Name: GunBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +49,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &3883731974328723886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642061384973662612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868b252f8b8b75a44a64d1d08df78bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mfLifeTime: 3
 --- !u!1 &7814701899121348258
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +153,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7814701899121348258}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2

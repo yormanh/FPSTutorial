@@ -407,6 +407,7 @@ MonoBehaviour:
   miMaxInventoryAmmunition: 32
   miDamage: 10
   mfTimeBetweenShoots: 0.2
+  mbInfiniteAmmunition: 1
   mBulletPrefab: {fileID: 3642061384973662612, guid: 5bcb47b9597c6da45acb274c970e1b9b, type: 3}
   mShootPoint: {fileID: 4046346605467052738}
   mfShootForce: 50
