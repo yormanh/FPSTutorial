@@ -408,9 +408,12 @@ MonoBehaviour:
   miDamage: 10
   mfTimeBetweenShoots: 0.2
   mbInfiniteAmmunition: 1
+  mReloadAudio: {fileID: 8300000, guid: 88d223967ec23694fba6d841038ae2a0, type: 3}
   mBulletPrefab: {fileID: 3642061384973662612, guid: 5bcb47b9597c6da45acb274c970e1b9b, type: 3}
   mShootPoint: {fileID: 4046346605467052738}
   mfShootForce: 50
+  mShootAudio: {fileID: 8300000, guid: 20c2944cd362ea74484e75c3ee1d1697, type: 3}
+  mNoAmmo: {fileID: 8300000, guid: 7132518ecb7600a4989606d888e308e1, type: 3}
 --- !u!1 &8922581421305505648
 GameObject:
   m_ObjectHideFlags: 0

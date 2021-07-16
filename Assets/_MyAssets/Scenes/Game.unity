@@ -732,18 +732,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2860006627450917066, guid: 220a458890649f743a2c692433bdc278, type: 3}
-      propertyPath: mNoAmmo
-      value: 
-      objectReference: {fileID: 8300000, guid: 7132518ecb7600a4989606d888e308e1, type: 3}
-    - target: {fileID: 2860006627450917066, guid: 220a458890649f743a2c692433bdc278, type: 3}
-      propertyPath: mShootAudio
-      value: 
-      objectReference: {fileID: 8300000, guid: 20c2944cd362ea74484e75c3ee1d1697, type: 3}
-    - target: {fileID: 2860006627450917066, guid: 220a458890649f743a2c692433bdc278, type: 3}
-      propertyPath: mReloadAudio
-      value: 
-      objectReference: {fileID: 8300000, guid: 88d223967ec23694fba6d841038ae2a0, type: 3}
     - target: {fileID: 3829603065592274475, guid: 220a458890649f743a2c692433bdc278, type: 3}
       propertyPath: m_Name
       value: Player
