@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StarterAssets;
+using UnityEngine.SceneManagement;
 
 public class Player : DamageableCharacter
 {
@@ -31,5 +33,22 @@ public class Player : DamageableCharacter
     {
         //Debug.Log("Reload");
         mEquippedWeapon.Reload();
+    }
+
+
+    protected override void Die()
+    {
+        base.Die();
+
+        this.enabled = false;
+        this.GetComponent<FirstPersonController>().enabled = true;
+
+        Invoke("ShowGameOver", 2);
+
+    }
+
+    void ShowGameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }

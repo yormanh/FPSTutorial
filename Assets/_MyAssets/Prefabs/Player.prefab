@@ -406,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miMaxAmmunition: 8
   miMaxInventoryAmmunition: 32
-  miDamage: 100
+  miDamage: 50
   mfTimeBetweenShoots: 0.2
   mbInfiniteAmmunition: 1
   mReloadAudio: {fileID: 8300000, guid: 88d223967ec23694fba6d841038ae2a0, type: 3}

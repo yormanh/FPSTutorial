@@ -827,8 +827,9 @@ GameObject:
   - component: {fileID: 1186785930}
   - component: {fileID: 1186785929}
   - component: {fileID: 1186785928}
+  - component: {fileID: 1186785932}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: PlayerCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -919,6 +920,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1186785932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186785927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183d79e7c10c65547bdd2142c3a90acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mLifeBar: {fileID: 1988968914}
+  mAmmo: {fileID: 1982714724}
+  mWeaponIcon: {fileID: 1014324920}
 --- !u!1 &1787221366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,10 +1421,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2682063768865717538, guid: 4f98d59a91851b145928537c2d145248, type: 3}
-      propertyPath: mfVelocity
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3091856561590125150, guid: 4f98d59a91851b145928537c2d145248, type: 3}
       propertyPath: m_RootOrder
       value: 5
