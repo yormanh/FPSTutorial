@@ -30,6 +30,8 @@ public class GunWeapon : BaseWeapon
 
                 lNewBullet.GetComponent<Rigidbody>().AddForce(mShootPoint.forward * mfShootForce, ForceMode.Impulse);
 
+                lNewBullet.GetComponent<GunBullet>().SetDamage(miDamage);
+
                 miCurrentAmmunition--;
                 mfNextShootTime = Time.time + mfTimeBetweenShoots;
 

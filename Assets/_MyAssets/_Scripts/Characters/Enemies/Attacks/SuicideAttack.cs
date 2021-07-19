@@ -6,7 +6,7 @@ public class SuicideAttack : MonoBehaviour
 {
     [SerializeField] ParticleSystem mExplosionPrefab;
     [SerializeField] float mfAttackDistance = 2f;
-    [SerializeField] float miDamage = 10;
+    [SerializeField] float mfDamage = 10;
 
     Transform mPlayer;
 

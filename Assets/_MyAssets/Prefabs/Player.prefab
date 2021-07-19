@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0189e7a9837eded4ab88be54dc7d40b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  miMaxLife: 100
 --- !u!1 &4718389445482534685
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miMaxAmmunition: 8
   miMaxInventoryAmmunition: 32
-  miDamage: 10
+  miDamage: 100
   mfTimeBetweenShoots: 0.2
   mbInfiniteAmmunition: 1
   mReloadAudio: {fileID: 8300000, guid: 88d223967ec23694fba6d841038ae2a0, type: 3}
