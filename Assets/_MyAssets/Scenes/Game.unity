@@ -259,7 +259,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyCapsule (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 714195769800635123, guid: 4f98d59a91851b145928537c2d145248, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f98d59a91851b145928537c2d145248, type: 3}
 --- !u!1001 &599084717
 PrefabInstance:
@@ -316,7 +317,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyCapsule (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 714195769800635123, guid: 4f98d59a91851b145928537c2d145248, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f98d59a91851b145928537c2d145248, type: 3}
 --- !u!1 &605946269
 GameObject:
@@ -543,7 +545,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyCapsule (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 714195769800635123, guid: 4f98d59a91851b145928537c2d145248, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f98d59a91851b145928537c2d145248, type: 3}
 --- !u!1 &963194225
 GameObject:
@@ -718,7 +721,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyCapsule (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 714195769800635123, guid: 4f98d59a91851b145928537c2d145248, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f98d59a91851b145928537c2d145248, type: 3}
 --- !u!4 &4135013735644871531 stripped
 Transform:

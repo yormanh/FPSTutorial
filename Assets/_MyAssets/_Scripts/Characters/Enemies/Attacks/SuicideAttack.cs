@@ -6,7 +6,7 @@ public class SuicideAttack : MonoBehaviour
 {
     [SerializeField] ParticleSystem mExplosionPrefab;
     [SerializeField] float mfAttackDistance = 2f;
-    [SerializeField] int miDamage = 10;
+    [SerializeField] float miDamage = 10;
 
     Transform mPlayer;
 
@@ -25,13 +25,12 @@ public class SuicideAttack : MonoBehaviour
         if (lfDistance < mfAttackDistance)
         {
 
-            //TODO: Hacer daño al jugador
+            //TODO: daño al jugador
 
             ParticleSystem lNewExplosion = Instantiate(mExplosionPrefab, this.transform.position, Quaternion.identity);
 
-            //Destroy(lNewExplosion, lNewExplosion.main.duration);
+            //Destroy(lNewExplosion.gameObject, lNewExplosion.main.duration);
             Destroy(this.gameObject);
-
         }
     }
 }
