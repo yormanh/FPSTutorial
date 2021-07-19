@@ -6,7 +6,7 @@ public class SuicideAttack : MonoBehaviour
 {
     [SerializeField] ParticleSystem mExplosionPrefab;
     [SerializeField] float mfAttackDistance = 2f;
-    [SerializeField] float mfDamage = 10;
+    [SerializeField] int miDamage = 10;
 
     Transform mPlayer;
 
@@ -26,6 +26,8 @@ public class SuicideAttack : MonoBehaviour
         {
 
             //TODO: daño al jugador
+
+            mPlayer.GetComponent<Player>().TakeDamage(miDamage);
 
             ParticleSystem lNewExplosion = Instantiate(mExplosionPrefab, this.transform.position, Quaternion.identity);
 

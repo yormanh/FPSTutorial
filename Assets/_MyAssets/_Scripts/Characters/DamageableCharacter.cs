@@ -8,11 +8,23 @@ public class DamageableCharacter : MonoBehaviour
     protected int miCurrentLife;
     protected bool mbIsDead = false;
 
+    public int GetMaxLife()
+    {
+        return miMaxLife;
+    }
+
+
+    public int GetCurrentLife()
+    {
+        return miCurrentLife;
+    }
     
     protected virtual void Start()
     {
         miCurrentLife = miMaxLife;
     }
+
+
 
     
     public void TakeDamage(int liDamage)
