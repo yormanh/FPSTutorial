@@ -736,10 +736,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2860006627450917066, guid: 220a458890649f743a2c692433bdc278, type: 3}
-      propertyPath: miDamage
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 3829603065592274475, guid: 220a458890649f743a2c692433bdc278, type: 3}
       propertyPath: m_Name
       value: Player
@@ -797,6 +793,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2682063768865717538, guid: 4f98d59a91851b145928537c2d145248, type: 3}
+      propertyPath: mfVelocity
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3091856561590125150, guid: 4f98d59a91851b145928537c2d145248, type: 3}
       propertyPath: m_RootOrder
       value: 5
