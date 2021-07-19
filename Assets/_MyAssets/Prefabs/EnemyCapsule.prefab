@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 6333945717123648417}
   - component: {fileID: 6543148966707636523}
   - component: {fileID: 2682063768865717538}
+  - component: {fileID: 714195769800635123}
   m_Layer: 0
   m_Name: EnemyCapsule
   m_TagString: Enemy
@@ -226,3 +227,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mfVelocity: 5
+--- !u!114 &714195769800635123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092580247999470297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bfbbd49f93ae447842b7cb7f6ada94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mExplosionPrefab: {fileID: 19800008, guid: 7075bd5fe1480184695a32611c15da57, type: 3}
+  mfAttackDistance: 2
+  miDamage: 10
