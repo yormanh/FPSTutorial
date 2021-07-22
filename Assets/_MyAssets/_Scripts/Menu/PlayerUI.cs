@@ -21,10 +21,31 @@ public class PlayerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateLifebar();
+        UdpteAmmunitionText();
+
+    }
+
+   
+
+    private void UpdateLifebar()
+    {
         float lfCurrentLife = mPlayer.GetCurrentLife();
         float lfMaxLife = mPlayer.GetMaxLife();
-
         mLifeBar.fillAmount = lfCurrentLife / lfMaxLife;
-            
+    }
+
+    private void UdpteAmmunitionText()
+    {
+        int liCurrentAmmunition = mPlayer.GetEquippedWeapon().GetCurrentAmmunition();
+        int liCurrentInventoryAmmunition = mPlayer.GetEquippedWeapon().GetCurrentInvetoryAmmunition();
+
+
+        bool lbInfiniteAmmunition = mPlayer.GetEquippedWeapon().GetInfiniteAmmunition();
+
+        if (!lbInfiniteAmmunition)
+            mAmmo.text = liCurrentAmmunition + " / " + liCurrentInventoryAmmunition;
+        else
+            mAmmo.text = liCurrentAmmunition + " / " + " INF";
     }
 }

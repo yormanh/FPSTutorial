@@ -18,6 +18,26 @@ public class BaseWeapon : MonoBehaviour
 
     [SerializeField] AudioClip mReloadAudio;
 
+
+    public bool GetInfiniteAmmunition()
+    {
+        return mbInfiniteAmmunition;
+    }
+
+
+    public int GetCurrentAmmunition()
+    {
+        return miCurrentAmmunition;
+    }
+
+    public int GetCurrentInvetoryAmmunition()
+    {
+        return miCurrentInvetoryAmmunition;
+    }
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {

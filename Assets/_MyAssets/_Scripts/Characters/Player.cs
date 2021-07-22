@@ -9,6 +9,17 @@ public class Player : DamageableCharacter
 
     BaseWeapon mEquippedWeapon;
 
+
+    public BaseWeapon GetEquippedWeapon()
+    {
+        return mEquippedWeapon;
+    }
+
+    private void SetEquippedWeapon(BaseWeapon value)
+    {
+        mEquippedWeapon = value;
+    }
+
     // Start is called before the first frame update
     protected override void Start()
     {

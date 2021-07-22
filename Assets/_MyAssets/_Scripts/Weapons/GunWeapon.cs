@@ -39,7 +39,7 @@ public class GunWeapon : BaseWeapon
             }
             else
             {
-                Debug.Log(this.name + " no tiene munición");
+                //Debug.Log(this.name + " no tiene munición");
                 AudioSource.PlayClipAtPoint(mNoAmmo, this.transform.position);
             }
 
