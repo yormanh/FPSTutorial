@@ -14,6 +14,7 @@ public class Player : DamageableCharacter
     {
         base.Start();
         mEquippedWeapon = GetComponentInChildren<BaseWeapon>();
+        Cursor.visible = false;
 
     }
 
@@ -49,6 +50,9 @@ public class Player : DamageableCharacter
 
     void ShowGameOver()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         SceneManager.LoadScene("GameOver");
     }
 }

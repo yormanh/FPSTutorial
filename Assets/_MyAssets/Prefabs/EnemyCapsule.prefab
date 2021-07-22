@@ -508,7 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mExplosionPrefab: {fileID: 19800008, guid: 7075bd5fe1480184695a32611c15da57, type: 3}
   mfAttackDistance: 2
-  miDamage: 10
+  miDamage: 50
 --- !u!114 &4691481955974706843
 MonoBehaviour:
   m_ObjectHideFlags: 0

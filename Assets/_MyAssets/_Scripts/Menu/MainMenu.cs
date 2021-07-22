@@ -14,4 +14,14 @@ public class MainMenu : MonoBehaviour
         mMainPanel.gameObject.SetActive(false);
         SceneManager.LoadScene("Game");
     }
+
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
