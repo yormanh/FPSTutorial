@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using StarterAssets;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Player : DamageableCharacter
 {
 
     BaseWeapon mEquippedWeapon;
 
+    InputActionAsset mActionAsset = null;
 
     public BaseWeapon GetEquippedWeapon()
     {
@@ -20,12 +22,23 @@ public class Player : DamageableCharacter
         mEquippedWeapon = value;
     }
 
+    private void Awake()
+    {
+        mActionAsset = GetComponent<PlayerInput>().actions;
+    }
+
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
         mEquippedWeapon = GetComponentInChildren<BaseWeapon>();
         Cursor.visible = false;
+
+        var lTriggerPress = mActionAsset.FindActionMap("Player").FindAction("TriggerPress");
+        lTriggerPress.Enable();
+
+        lTriggerPress.performed += OnTriggerPress;
+        lTriggerPress.canceled += OnTriggerPress;
 
     }
 
@@ -35,11 +48,25 @@ public class Player : DamageableCharacter
         
     }
 
-    private void OnAttack()
+    private void OnTriggerPress()
     {
         //Debug.Log("Attack");
         mEquippedWeapon.Attack();
     }
+
+    private void OnTriggerPress(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            mEquippedWeapon.PressTrigger();
+        }
+
+        if (context.canceled)
+        {
+            mEquippedWeapon.ReleaseTrigger();
+        }
+    }
+
 
     private void OnReload ()
     {

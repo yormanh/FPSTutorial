@@ -74,4 +74,14 @@ public class BaseWeapon : MonoBehaviour
                 miCurrentInvetoryAmmunition -= liAmmunitionToReload;
         }
     }
+
+    public virtual void PressTrigger()
+    {
+
+    }
+
+    public virtual void ReleaseTrigger()
+    {
+
+    }
 }
