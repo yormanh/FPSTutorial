@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class RifleWeapon : GunWeapon
 {
+    private void OnDisable()
+    {
+        CancelInvoke();
+    }
+
+
     public override void PressTrigger()
     {
         //base.PressTrigger();
