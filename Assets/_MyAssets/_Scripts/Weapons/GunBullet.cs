@@ -5,6 +5,7 @@ using UnityEngine;
 public class GunBullet : MonoBehaviour
 {
     [SerializeField] float mfLifeTime = 3.0f;
+    [SerializeField] string msTargetTag = "Enemy";
 
     int miDamage;
 
@@ -26,10 +27,20 @@ public class GunBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        //Debug.Log("hit: " + other.name);
+
+        if (other.CompareTag(msTargetTag))
         {
-            //Destroy(other.gameObject);
-            other.GetComponent<Enemy>().TakeDamage(miDamage);
+           if (other.GetComponent<DamageableCharacter>() != null)
+            {
+                //Destroy(other.gameObject);
+                other.GetComponent<DamageableCharacter>().TakeDamage(miDamage);
+            }
+           else if (other.GetComponentInParent<DamageableCharacter>() != null)
+            {
+                other.GetComponentInParent<DamageableCharacter>().TakeDamage(miDamage);
+            }
+
         }
 
         Destroy(this.gameObject);
